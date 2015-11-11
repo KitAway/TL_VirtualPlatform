@@ -23,14 +23,16 @@ sc_uint<32> Bus::read(sc_uint<32> addr)
 	sc_uint<32> data;
 	switch (addr)
 	{
-	case addr_PIO:
+	case addr_PIO_CAR:
+	case addr_PIO_LIGHT:
 		data=PIO->read(addr);
 		break;
-	case addr_TIMER:
-		data = TIMER->read(addr);
+	case addr_TIMER_MAX:
+	case addr_TIMER_CONTROL:
+	case addr_TIMER_COUNTER:
+		data=TIMER->read(addr);
 		break;
 	default:
-		data = 0;
 		break;
 	}
 

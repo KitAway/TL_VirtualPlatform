@@ -159,6 +159,7 @@
     <ClInclude Include="light_if.h" />
     <ClInclude Include="lightDriver.h" />
     <ClInclude Include="PIO_HW.h" />
+    <ClInclude Include="TestBench.h" />
     <ClInclude Include="TIMER_HW.h" />
     <ClInclude Include="timerDriver.h" />
     <ClInclude Include="timer_if.h" />
@@ -168,8 +169,12 @@
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="carDriver.cpp" />
     <ClCompile Include="lightDriver.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="PIO_HW.cpp" />
+    <ClCompile Include="TestBench.cpp" />
+    <ClCompile Include="timerDriver.cpp" />
     <ClCompile Include="timer_hw.cpp" />
+    <ClCompile Include="TLC.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

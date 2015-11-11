@@ -8,10 +8,13 @@ using namespace sc_dt;
 
 SC_MODULE(car_driver),public car_if
 {
-	sc_port<car_if> carIf;
 	sc_port<bus_if> busIf;
 
 	void setCarStatus(bool status);
+	bool isCarPresent();
+	SC_CTOR(car_driver) 
+	{
+	}
 };
 
 

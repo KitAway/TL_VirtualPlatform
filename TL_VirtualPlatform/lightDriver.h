@@ -8,8 +8,10 @@ using namespace sc_dt;
 
 SC_MODULE(light_driver),public light_interface
 {
-	sc_port<light_interface> carIf;
+
 	sc_port<bus_if> busIf;
+
+	SC_CTOR(light_driver);
 
 	void setLightColor(LightColor MainColor, LightColor SideColor);
 };
