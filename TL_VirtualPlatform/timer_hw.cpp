@@ -6,6 +6,10 @@ void TIMER::write(sc_uint<32> addr, sc_uint<32> data)
 	{
 	case addr_TIMER_CONTROL:
 		control = data;
+
+		runIf = (data.range(1, 1) == 1);
+		continueRun = (data.range(2, 2) == 1);
+
 		break;
 	case addr_TIMER_COUNTER:
 		counter = data;
@@ -41,15 +45,13 @@ sc_uint<32> TIMER::read(sc_uint<32> addr)
 
 void TIMER::run()
 {
-	sc_uint<32> data = control;
-	if (data&0x02!= 0x02)
-		return;
-	sc_uint<32> tmp = counter.read();
-	while (tmp!=max.read())
+	if (runIf && (max!= 0))
 	{
-		wait(sc_time(1, SC_MS));
-		tmp++;
+		counter = (counter+1) % max;
+		if (counter == 0)
+		{
+			runIf = continueRun;
+			control |= 0x01;
+		}
 	}
-	data = 0x01;
-	control.write(data);
 }

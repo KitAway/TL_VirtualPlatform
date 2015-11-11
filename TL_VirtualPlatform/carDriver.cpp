@@ -2,7 +2,10 @@
 
 void car_driver::setCarStatus(bool status)
 {
-	busIf->write(addr_PIO_CAR, status);
+	if (status)
+		busIf->write(addr_PIO_CAR, 0x01);
+	else
+		busIf->write(addr_PIO_CAR, 0x00);
 }
 
 bool car_driver::isCarPresent()

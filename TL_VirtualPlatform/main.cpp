@@ -15,12 +15,14 @@ int sc_main(int argc, char* argv[])
 	Bus bus("Bus");
 	TIMER timer("Timer");
 	PIO pio("PIO");
+	sc_clock clk("clock",1,SC_MS);
 
-	car_driver carDv("car driver");
-	light_driver lightDv("light driver");
-	TimerDriver timerDv("timer driver");
+	car_driver carDv("car_driver1"),carDV("car_driver2");
+	light_driver lightDv("light_driver");
+	TimerDriver timerDv("timer_driver");
 
 	carDv.busIf(bus);
+	carDV.busIf(bus);
 	lightDv.busIf(bus);
 	timerDv.busIf(bus);
 
@@ -31,8 +33,10 @@ int sc_main(int argc, char* argv[])
 	bus.PIO(pio);
 	bus.TIMER(timer);
 
-	testbench TB("test bench");
-	TB.carIf(carDv);
+	timer.clk(clk);
+
+	testbench TB("test_bench");
+	TB.carIf(carDV);
 
 	sc_start(100, SC_SEC);
 
