@@ -13,71 +13,68 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\interfaces">
+      <UniqueIdentifier>{69dabdd0-d331-4bf5-af2e-7b2d744e10ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\drivers">
+      <UniqueIdentifier>{33d96461-82aa-4733-94c2-ccbc422b2148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hardware">
+      <UniqueIdentifier>{8eb8669e-4e8f-44cb-aab3-633649baeba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\drivers">
+      <UniqueIdentifier>{44ec8746-405e-4895-af2c-425e3f3b60ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hardware">
+      <UniqueIdentifier>{28b0461f-4517-4ab9-b959-dbae46213708}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TLC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bus.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="timerDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="carDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lightDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="bus_if.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TIMER_HW.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PIO_HW.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hardwareAddr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="timer_if.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="car_if.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="light_if.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lightColor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TestBench.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bus_if.h">
+      <Filter>Header Files\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="car_if.h">
+      <Filter>Header Files\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="light_if.h">
+      <Filter>Header Files\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="timer_if.h">
+      <Filter>Header Files\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="lightDriver.h">
+      <Filter>Header Files\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="timerDriver.h">
+      <Filter>Header Files\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="carDriver.h">
+      <Filter>Header Files\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="hardwareAddr.h">
+      <Filter>Header Files\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="PIO_HW.h">
+      <Filter>Header Files\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="lightColor.h">
+      <Filter>Header Files\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="TIMER_HW.h">
+      <Filter>Header Files\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="Bus.h">
+      <Filter>Header Files\Hardware</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="timer_hw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PIO_HW.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="carDriver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="lightDriver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TLC.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="timerDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TestBench.cpp">
@@ -85,6 +82,24 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="carDriver.cpp">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="lightDriver.cpp">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="timerDriver.cpp">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="PIO_HW.cpp">
+      <Filter>Source Files\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="timer_hw.cpp">
+      <Filter>Source Files\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="Bus.cpp">
+      <Filter>Source Files\hardware</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
