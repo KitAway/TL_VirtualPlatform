@@ -13,6 +13,6 @@ void testbench::run()
 	carIf->setCarStatus(false);
 	wait(15, SC_SEC);
 	carIf->setCarStatus(true);
-	wait(30, SC_SEC);
+	wait(70, SC_SEC);
 	carIf->setCarStatus(false);
 }
