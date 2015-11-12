@@ -3,7 +3,10 @@
 void car_driver::setCarStatus(bool status)
 {
 	if (status)
+	{
 		busIf->write(addr_PIO_CAR, 0x01);
+		car.notify();
+	}
 	else
 		busIf->write(addr_PIO_CAR, 0x00);
 }

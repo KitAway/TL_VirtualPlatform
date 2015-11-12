@@ -9,9 +9,9 @@ void testbench::run()
 	carIf->setCarStatus(false);
 	wait(12, SC_SEC);
 	carIf->setCarStatus(true);
-	wait(20, SC_SEC);
+	wait(30, SC_SEC);
 	carIf->setCarStatus(false);
-	wait(11, SC_SEC);
+	wait(15, SC_SEC);
 	carIf->setCarStatus(true);
 	wait(30, SC_SEC);
 	carIf->setCarStatus(false);
