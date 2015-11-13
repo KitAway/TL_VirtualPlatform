@@ -5,6 +5,6 @@ using namespace sc_dt;
 class timer_if :virtual public sc_interface
 {
 public:
-	virtual void wait(sc_time sTime) = 0;
+	virtual void wait_for_sec(sc_time sTime) = 0;
 
 };

@@ -6,14 +6,14 @@ void TLC::run()
 	while (true)
 	{
 		lightIf->setLightColor(Green, Red);
-		timerIf->wait(greenTime);
+		timerIf->wait_for_sec(greenTime);
 		if (!carIf->isCarPresent())
-			wait(carIf->getEvent());
+			wait(carIf->car);
 		lightIf->setLightColor(Yellow, Red);
-		timerIf->wait(yellowTime);
+		timerIf->wait_for_sec(yellowTime);
 		lightIf->setLightColor(Red, Green);
-		timerIf->wait(redTime);
+		timerIf->wait_for_sec(redTime);
 		lightIf->setLightColor(Red, Yellow);
-		timerIf->wait(yellowTime);
+		timerIf->wait_for_sec(yellowTime);
 	}
 }

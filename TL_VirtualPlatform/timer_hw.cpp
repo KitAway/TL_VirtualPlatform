@@ -7,8 +7,8 @@ void TIMER::write(sc_uint<32> addr, sc_uint<32> data)
 	case addr_TIMER_CONTROL:
 		control = data;
 
-		runIf = (data.range(1, 1) == 1);
-		continueRun = (data.range(2, 2) == 1);
+		runIf = data&RUN;
+		continueRun = data&CONTINUOS_RUNNING;
 
 		break;
 	case addr_TIMER_COUNTER:
@@ -29,6 +29,7 @@ sc_uint<32> TIMER::read(sc_uint<32> addr)
 	{
 	case addr_TIMER_CONTROL:
 		data = control;
+		control&=~OVERFLOW_BIT;
 		break;
 	case addr_TIMER_COUNTER:
 		data = counter;
@@ -51,7 +52,8 @@ void TIMER::run()
 		if (counter == 0)
 		{
 			runIf = continueRun;
-			control |= 0x01;
+			if(control&INTERUPT_ENABLE)
+				control |= OVERFLOW_BIT;
 		}
 	}
 }

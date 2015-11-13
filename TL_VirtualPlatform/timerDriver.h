@@ -8,7 +8,7 @@ SC_MODULE( TimerDriver),public timer_if
 {
 public:
 	sc_port<bus_if> busIf;
-	void wait(sc_time sTime);
+	void wait_for_sec(sc_time sTime);
 	SC_CTOR(TimerDriver)
 	{
 

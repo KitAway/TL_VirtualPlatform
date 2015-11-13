@@ -10,5 +10,4 @@ public:
 	sc_event car;
 	virtual void setCarStatus(bool status) = 0;
 	virtual bool isCarPresent() = 0;
-	sc_event& getEvent() { return car; }
 };

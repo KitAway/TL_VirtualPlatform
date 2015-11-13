@@ -6,6 +6,12 @@
 
 
 
-#define addr_TIMER_MAX 0x804
-#define addr_TIMER_COUNTER 0x808
-#define addr_TIMER_CONTROL 0x80B
+#define addr_TIMER_MAX 0x104
+#define addr_TIMER_COUNTER 0x100
+#define addr_TIMER_CONTROL 0x108
+
+
+#define INTERUPT_ENABLE 0x01
+#define CONTINUOS_RUNNING 0x02
+#define OVERFLOW_BIT	0x04
+#define RUN		0x08
